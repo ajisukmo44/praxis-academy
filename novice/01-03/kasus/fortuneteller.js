@@ -6,4 +6,4 @@ function tellFortune(jobTitle, geoLocation, partner, numKids) {
 
 tellFortune('bball player', 'spain', 'Shaq', 3);
 tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
-tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 99);
