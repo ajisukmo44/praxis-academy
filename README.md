@@ -2,5 +2,5 @@
 
 NAma : Aji Sukmo
 Bidang : Font End
-Alamat : SLeman, Yk
+Alamat : Sleman, Yk
 Email : ajisuk31@gmail.com
