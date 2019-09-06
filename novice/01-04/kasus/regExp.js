@@ -1,17 +1,9 @@
-function ValidateEmail(inputText) {
+var re = /(\w+)\@(\w+)\.(\w+)/g;
 
-
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-
-    if (inputText.value.match(mailformat)) {
-
-        alert("Halo, usernama anda adalah " + results + " , domain anda adalah ");
-        document.form1.text1.focus();
-        return true;
-    } else {
-        alert("Format email yang anda masukan salah ");
-        document.form1.text1.focus();
-        return false;
-    }
+function testInfo(emailInput) {
+    var OK = re.exec(emailInput.value);
+    if (!OK)
+        window.alert(emailInput.value + ' Format email yang anda inputkan salah');
+    else
+        window.alert('Hallo username anda adalah  ' + OK[1] + ', domain anda adalah  ' + OK[2] + '.' + OK[3]);
 }
