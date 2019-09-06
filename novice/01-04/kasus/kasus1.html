@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>js</title>
+    <link rel='stylesheet' href='form-style.css' type='text/css' />
+</head>
+
+<body onload='document.form1.text1.focus()'>
+    <div class="mail">
+        <h2>cek plat nomer</h2>
+        <form name="form1" action="#">
+            <ul>
+                <label for="text1">Masukan plat nomer anda : </label><input type='text' name='text1' id='text1' />
+                &nbsp; &nbsp; <br><br>
+                &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<input type="submit" name="submit" value="cek"
+                    onclick="ValidateEmail(document.form1.text1)" />
+            </ul>
+        </form>
+    </div>
+    <script src="kasus1.js"></script>
+</body>
+
+</html>

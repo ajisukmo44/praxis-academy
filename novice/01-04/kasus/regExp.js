@@ -1,10 +1,12 @@
 function ValidateEmail(inputText) {
-    var username = document.getElementById("username").value;
+
 
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+
     if (inputText.value.match(mailformat)) {
 
-        alert("Halo, usernama anda adalah " + username + " , domain anda adalah ");
+        alert("Halo, usernama anda adalah " + results + " , domain anda adalah ");
         document.form1.text1.focus();
         return true;
     } else {

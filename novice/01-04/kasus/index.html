@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,8 +12,6 @@
         <h2>Validasi email</h2>
         <form name="form1" action="#">
             <ul>
-                <label for="username">username : </label>
-                <input type='text' name='username' id='username' /> &nbsp; &nbsp; <br> <br>
                 <label for="text1">Email&nbsp; &nbsp;&nbsp; &nbsp; : </label><input type='text' name='text1'
                     id='text1' /> &nbsp; &nbsp; <br><br>
                 &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
@@ -23,7 +21,48 @@
             </ul>
         </form>
     </div>
-    <script src="regExp.js"></script>
+    <script type="text/javascript">
+        function ValidateEmail(inputText) {
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            var results = document.getElementById("text1").value;
+            r = results;
+
+
+            if (inputText.value.match(mailformat)) {
+
+                alert("Halo, usernama anda adalah " + r + " , domain anda adalah ");
+                document.form1.text1.focus();
+                return true;
+            } else {
+                alert("Format email yang anda masukan salah ");
+                document.form1.text1.focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var string = "ajisuk31@gmail.com";
+
+
+        document.write(string.match(/\D+/g));
+    </script>
+
 </body>
 
 </html>
