@@ -1,29 +1,43 @@
-Shape = {
-    type: 'Shape',
-    getType: function () {
-        return this.type;
-    }
+function Alpha() {}
+
+Alpha.prototype.isAlpha = function (letter) {
+    return /^[a-zA-Z]$/.test(letter);
+};
+
+function Vowel() {}
+
+Vowel.prototype = new Alpha();
+
+Vowel.prototype.isVowel = function (letter) {
+    return /^[aeiuoyAEIOUY]$/.test(letter);
+};
+
+
+function Consonant() {}
+
+Consonant.prototype = new Alpha(); //Write in blank to inherit from Alpha
+
+Consonant.prototype.isConsonant = function (letter) {
+    return /^[^aeiouyAEIOUY]$/.test(letter);
 }
 
-function Triangle(a, b, c) {
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.type = 'Triangle';
-}
+function processData(input) {
+    var a = new Alpha();
+    console.log(`'${input[0]}' is ${a.isAlpha(input[0])? ``: `not `}a letter.`);
 
-Triangle.prototype = Shape;
+    var b = new Vowel();
+    console.log(`'${input[1]}' is ${b.isAlpha(input[1])? `a letter ${b.isVowel(input[1])? `and`: `but not`} a vowel.`: "not a letter."} `);
 
-Triangle.prototype.constructor = Triangle;
+    var c = new Consonant();
+    console.log(`'${input[2]}' is ${c.isAlpha(input[2])? `a letter ${c.isConsonant(input[2])? `and`: `but not`} a consonant.`: "not a letter."} `);
 
-Triangle.prototype.getPerimeter = function () {
-    console.log('Get Perimeter');
-    return this.a + this.b + this.c;
+    process.stdin.resume();
+    process.stdin.setEncoding("ascii");
+    _input = "";
+    process.stdin.on("data", function (input) {
+        _input += input;
+    });
 
-}
-
-var t = new Triangle(1, 2, 3);
-console.log(t.constructor === Triangle);
-console.log(Shape.isPrototypeOf(t));
-console.log(t.getPerimeter());
-console.log(t.getType());
+    process.stdin.on("end", function () {
+        processData(_input.split(' '));
+    });
