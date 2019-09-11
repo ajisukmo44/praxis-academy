@@ -26,8 +26,6 @@ class cat {
         return this;
 
     }
-
-
 }
 var cat1 = new cat('bony', 'persia', 'brown');
 var cat2 = new cat('bona', 'persia', 'black');
