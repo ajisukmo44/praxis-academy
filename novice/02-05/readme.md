@@ -3,4 +3,4 @@
 1. mempelajari dan latihan tentang  <a href=""> modules</a> <br>
 
 ..<br>
-4. mengerjakan <a href="">kasus</a>.
+2. mengerjakan <a href="">kasus</a>.
