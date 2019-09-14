@@ -1,6 +1,7 @@
 const axios = require('axios');
 // async/ await
 async function firstAsync() {
+    //selesai
     let njupuk = await axios.get('https://jsonplaceholder.typicode.com/users', 5000);
     this.data = njupuk.data;
     console.log(njupuk.data);

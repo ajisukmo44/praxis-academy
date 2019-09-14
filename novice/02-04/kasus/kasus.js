@@ -1,13 +1,12 @@
-Promise.all
-const promise1 = Promise.resolve('Hello World');
-const promise2 = 10;
-const promise3 = new Promise((resolve, reject) =>
-    setTimeout(resolve, 2000, 'Goodbye')
-);
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res =>
-    res.json()
-);
+const getPost = () => fetch('https://jsonplaceholder.typicode.com/posts/1')
+const getAuthor = (id) => fetch('https://jsonplaceholder.typicode.com/users/' + id)
+const getComment = (id) => fetch('https://jsonplaceholder.typicode.com/users/' + id)
 
-Promise.all([promise1, promise2, promise3, promise4]).then(values =>
-    console.log(values)
-);
+var a = getPost().then(res => res.json()) // #1 get post
+var b = a.then(res => getAuthor(res.id)).then(res => res.json()) // #2 get author
+var c = a.then(res => getComment(res.id)).then(res => res.json()) //#3 get comment
+Promise.all([a, b, c]).then(results => {
+    console.log(results[0])
+    console.log(results[1])
+    console.log(results[2])
+})
