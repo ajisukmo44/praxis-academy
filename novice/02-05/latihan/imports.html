@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Imports and Exports</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <header>
+        <h1>Imports and Exports</h1>
+    </header>
+    <main>
+        <pre id="output"></pre>
+    </main>
+    <script type="module">
+
+        import {myFunc} from "./bubba.js";
+        
+        console.log( myFunc(6) );
+        
+        console.log( myFunc2(4) );
+        
+        //console.log( x(3) );
+    </script>
+</body>
+
+</html>
