@@ -1,10 +1,10 @@
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(function (response) {
-//         return response.json();
-//     })
-//     .then(function (myJson) {
-//         console.log(JSON.stringify(myJson));
-//     });
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        console.log(JSON.stringify(myJson));
+    });
 
 
 // postData('https://jsonplaceholder.typicode.com/users', {
@@ -35,18 +35,18 @@
 
 // Uploading JSON data
 
-var url = 'https://jsonplaceholder.typicode.com/users';
-var data = {
-    username: 'joni',
-    password: '123'
-};
+// var url = 'file:///C:/Users/Acer%20E%2014/Desktop/praxis-academy/novice/03-02/latihan/index.html';
+// var data = {
+//     username: 'joni',
+//     password: '123'
+// };
 
-fetch(url, {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }).then(res => res.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
+// fetch(url, {
+//         method: 'POST', // or 'PUT'
+//         body: JSON.stringify(data), // data can be `string` or {object}!
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     }).then(res => res.json())
+//     .then(response => console.log('Success:', JSON.stringify(response)))
+//     .catch(error => console.error('Error:', error));
