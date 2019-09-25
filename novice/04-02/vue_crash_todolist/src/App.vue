@@ -1,34 +1,12 @@
 <template>
   <div id="app">
-    <Todos v-bind:todos="todos" />
+    <div id="nav">
+      <router-link to="/">Home</router-link>|
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
-
-<script>
-import Todos from "./components/Todos";
-export default {
-  name: "app",
-  components: {
-    Todos
-  },
-  data() {
-    return {
-      todos: [
-        {
-          id: 1,
-          title: "todo one",
-          complete: false
-        },
-        {
-          id: 2,
-          title: "todo two",
-          complete: false
-        }
-      ]
-    };
-  }
-};
-</script>
 
 <style>
 #app {
@@ -39,7 +17,7 @@ export default {
   color: #2c3e50;
 }
 #nav {
-  padding: 20px;
+  padding: 30px;
 }
 
 #nav a {
