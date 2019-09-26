@@ -9,11 +9,9 @@ constructor(){
 
         return (
         	<div>
-            <h1> THIS IS HEADER COMPONENT </h1>
+            <h1> TEST REACT COMPONENTS, STATE, PROPS</h1>
             <ul>
-            <li> Home </li> 
-            <li> List Mahasiswa</li> 
-            <li> Add Mahasiswa< /li> 
+            <li> Home - List Mahasiswa - Add Mahasiswa</li> 
             </ul> 
 </div>
         )
